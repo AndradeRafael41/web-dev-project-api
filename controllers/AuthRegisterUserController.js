@@ -56,6 +56,7 @@ module.exports = class AuthRegisterUserController {
             return res.status(422).json({ message: "Passwords Don't Match" });
         }
 
+        // verify if user in IN DB
         const userExist = await User.findOne({ email: email});
 
         if (userExist) {
