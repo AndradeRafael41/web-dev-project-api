@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 
 const dbUser = process.env.DB_USER;
 const dbPassword = process.env.DB_PASS;
+const dbUrl = process.env.DB_URL
 
 const connect = () =>{
     
-    mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster12.tpwpeh8.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster12`);
+    mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}${dbUrl}`);
     
     const connection = mongoose.connection;
 
