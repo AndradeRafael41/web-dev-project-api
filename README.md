@@ -29,7 +29,6 @@ Crie um arquivo .env na raiz do projeto com as seguintes variáveis:
   
   PORT = 
   
-  DB_URL = 
 ## Uso
 
 ```npm start ```
