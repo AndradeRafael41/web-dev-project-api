@@ -1,1 +1,8 @@
+# node modules ignore
 node_modules/
+
+#process env ignore
+.env
+
+# vscode workspace config ignore
+.vscode
