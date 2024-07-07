@@ -5,17 +5,18 @@ const bodyParser = require('body-parser');
 
 var app = express();
 
-
 app.use(cors());
 
 app.use(bodyParser.json());
 
-
 const AuthRegisterUserRoutes = require("./routes/AuthRegisterUserRoutes");
-const LoginRoutes = require("./routes/LoginRoutes");
-
 app.use(AuthRegisterUserRoutes);
+
+const LoginRoutes = require("./routes/LoginRoutes");
 app.use(LoginRoutes);
+
+const MovieRoutes = require("./routes/MovieRoutes")
+app.use(MovieRoutes);
 
 const port = process.env.PORT || 3000;
 

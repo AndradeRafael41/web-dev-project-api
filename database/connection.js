@@ -20,7 +20,6 @@ const connect = () =>{
     });
 }
 
-
 connect();
 
 module.exports = mongoose;
